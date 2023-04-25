@@ -1,0 +1,28 @@
+﻿<Window x:Class="LabN4_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabN4_"
+        mc:Ignorable="d"
+        Title="Хранилище туров" Height="450" Width="1052.632">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="151*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Добавить запись" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Width="144" Height="47" Click="Button_Click"/>
+        <Button Content="Удалить запись" HorizontalAlignment="Left" Margin="159,362,0,0" VerticalAlignment="Top" Width="183" Height="47" x:Name="btnDelete" Click="Button2_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Редактировать запись" HorizontalAlignment="Left" Margin="99,362,0,0" VerticalAlignment="Top" Width="168" Height="47" x:Name="btnEdit" Click="Button3_Click" Grid.Column="1"/>
+        <DataGrid x:Name="dataGrid"  Height="347" Margin="15,10,5,0" VerticalAlignment="Top" SelectionMode="Single" HorizontalAlignment="Left" 
+   HorizontalContentAlignment="Stretch" ColumnWidth="*" Grid.ColumnSpan="2" Width="500" />
+        <RichTextBox Grid.Column="1" HorizontalAlignment="Left" Height="347" Margin="272,10,0,0" VerticalAlignment="Top" Width="515" x:Name="rtbText">
+            <FlowDocument>
+                <Paragraph>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
